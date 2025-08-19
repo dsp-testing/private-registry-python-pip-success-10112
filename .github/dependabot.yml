@@ -2,7 +2,7 @@ version: 2
 updates:
   - package-ecosystem: "pip"
     directory: "/"
-    insecure-external-code-execution: allow
+    # insecure-external-code-execution: allow
     versioning-strategy: "increase"
     schedule:
       interval: "daily"
@@ -15,3 +15,4 @@ registries:
     url: "https://jfrogghdemo.jfrog.io/artifactory/api/pypi/db-dependbot-python/simple"
     username: "thavaahariharangit@github.com"  # Store username in GitHub Secrets
     password: "${{ secrets.JFROG_ARTIFACTORY_TOKEN }}"
+    replaces-base: true
